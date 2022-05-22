@@ -1,0 +1,739 @@
+/* section 1 */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(t4.jpg);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    color: white;
+}
+.webname{
+    font-family: 'Times New Roman', Times, serif;
+    margin: .5rem;
+    font-size: 2rem;
+    user-select: none;
+}
+.navbarlinks ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbarlinks li{
+    list-style: none;
+}
+.navbarlinks li a{
+    text-decoration:none ;
+    color: white;
+    padding: 1rem;
+    display: block;
+    font-family: 'Times New Roman', Times, serif ;
+    margin: 10px 20px;
+    left: 50px;
+}
+.navbarlinks li a::after{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0.4em;
+    width: 0%;
+    background-color: black;
+    transition: all ease-in-out .5s;
+}
+.navbarlinks li a:hover::after{
+    width: 5%;
+}
+.navbarlinks li a:hover{
+    color: black;
+}
+
+.navbarlinks li:hover{
+    background-color: rgb(255, 47, 47);
+    border-radius: 9pt;
+    
+}
+#toggle{
+    display: none;
+}
+.toggle .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10pt;
+}
+.cross{
+    visibility: hidden;
+}
+
+@media (max-width: 750px){
+    #toggle{
+        position: absolute;
+        right: 0%;
+        top: 0%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 20px 40px 0 0;
+    }
+    .navbarlinks li:hover{
+        background-color: red;
+        box-shadow: 0px 0px 0px red;
+    }
+    .navbarlinks{
+        position: absolute;
+        right: -5000px;
+        top: 0;
+        background-color: red;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+     .navbarlinks ul {
+        width: 100%; 
+        flex-direction: column;
+        
+    }
+     .navbarlinks li{
+        text-align: left;
+        margin: 0px 20px;
+    }
+    .navbarlinks li a{
+        padding: .5rem 1rem;
+    }
+    .navbarlinks.active{
+        display: flex;
+    }
+    .cross{
+        visibility: visible;
+    }
+    li .cross{
+        margin-top: 30px;
+        color: black;
+        margin-left: 130px;
+    }
+    li .cross:hover{
+        background-color: white;
+        border-radius: 4pt;
+    }
+    .navbarlinks li a::after{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 0.4em;
+        width: 0%;
+        background-color: red;
+        transition: all ease-in-out .3s;
+    }
+    .navbarlinks li a:hover::after{
+        width: 13%;
+    }
+    .navbarlinks li a:hover{
+        color: black;
+    }
+   
+}
+
+/* section2 */
+
+.second{
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image: url(audimage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid black;
+    box-shadow: 1px 1px 3px black ;
+}
+.second .title{
+    color: white;
+    text-shadow: 2px 2px 5px red;
+    box-shadow: 2px 2px 5px red;
+    text-transform: uppercase;
+    border: 5px solid white;
+    box-shadow: 1px 1px 10px black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-family: 'Luxurious Roman', cursive;
+    font-size: 70px;
+    padding-left:  30px;
+    padding-top:  30px;
+    padding-bottom:  30px;
+    padding-right:  30px;
+    border-bottom-right-radius: 70px ;
+    border-top-left-radius: 70px;
+}
+
+/* section3 */
+
+.third{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.third .wlcm{
+    font-size: 45px;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+    border-top: 5px solid red;
+    border-bottom: 5px solid red;
+    font-family: 'Luxurious Roman', cursive;
+    letter-spacing: 5px;
+}
+.notice{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.notice .noticel{
+    font-size: 25px;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-top: 5px solid red;
+    border-bottom: 5px solid red;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: 'Luxurious Roman', cursive;
+    letter-spacing: 5px;
+}
+
+/* section4 */
+
+.forth{
+    margin-top: 5%;
+    border: 4px solid black;
+}
+.maincontent{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.club1{
+    border: 3px solid white;
+    background-color: black;
+    margin-left: 15%;
+    width: 70vw;
+    border-radius: 30px;
+    transition: box-shadow 1s;
+    margin-left: 3%;
+}
+.club1:hover{
+    box-shadow: 10px 10px 50px red;
+   
+}
+.logo{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+}
+.cname{
+    margin-left: 40%;
+    color: yellow;
+    font-size: 70px;
+    margin-right: 45%;
+    letter-spacing: 3px;
+    
+}
+.logo .ieee{
+    height: 320px;
+    width: 500px;
+    border: 2px solid white;
+    margin-top: 5%;
+    margin-left: 3%;
+    margin-bottom: 3%;
+}
+.about{
+    color: white;
+    font-size: 25px;
+    border: 2px solid white;
+    display: flex;
+    margin-top: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    padding: 10px 10px 10px 10px;
+    font-family: 'Titillium Web', sans-serif;
+    
+}
+.about a:link{
+    color: red;
+}
+.about a:visited{
+    color: yellow;
+}
+.about a:hover{
+    color: palevioletred;
+}
+.about a:active{
+    color: aqua;
+}
+.club2{
+    border: 3px solid white;
+    background-color: black;
+    margin-top: 1%;
+    margin-left: 15%;
+    width: 70vw;
+    border-radius: 30px;
+    transition: box-shadow 1s;
+    margin-left: 26%;
+
+}
+.club2:hover{
+    box-shadow: 10px 10px 50px red;
+
+}
+
+.logo .gdsc{
+    height: 350px;
+    width: 500px;
+    border: 2px solid white;
+    margin-top: 9%;
+    margin-left: 3%;
+}
+.club3{
+    border: 3px solid white;
+    background-color: black;
+    margin-top: 1%;
+    margin-left: 15%;
+    width: 70vw;
+    border-radius: 30px;
+    transition: box-shadow 1s;
+    margin-left: 3%;
+
+}
+.club3:hover{
+    box-shadow: 10px 10px 50px red;
+
+}
+.logo .bnb{
+    height: 320px;
+    width: 500px;
+    border: 2px solid white;
+    margin-top: 5%;
+    margin-left: 3%;
+
+}
+.club3 .bname{
+    color: yellow;
+    border: 2px solid black;
+    font-size: 60px;
+    margin-left: 25%;
+    letter-spacing: 3px;
+    
+}
+.club4{
+    border: 3px solid white;
+    background-color: black;
+    margin-top: 1%;
+    margin-left: 15%;
+    width: 70vw;
+    border-radius: 30px;
+    transition: box-shadow 1s;
+    margin-left: 26%;
+    
+
+}
+.club4:hover{
+    box-shadow: 10px 10px 50px red;
+
+}
+.logo .c2s2{
+    height: 320px;
+    width: 500px;
+    border: 2px solid white;
+    margin-top: 5%;
+    margin-left: 3%;
+    margin-bottom: 4%;
+}
+.club5{
+    border: 3px solid white;
+    background-color: black;
+    margin-top: 1%;
+    margin-left: 15%;
+    width: 70vw;
+    border-radius: 30px;
+    transition: box-shadow 1s;
+    margin-left: 3%;
+  
+}
+.club5:hover{
+    box-shadow: 10px 10px 50px red;
+}
+
+.club5 span{
+    color: yellow;
+    border: 2px solid black;
+    font-size: 60px;
+    margin-left: 30%;
+    letter-spacing: 3px;
+
+}
+.logo .ebuzz{
+    height: 320px;
+    width: 500px;
+    border: 2px solid white;
+    margin-top: 5%;
+    margin-left: 3%;
+}
+.club6{
+    border: 3px solid white;
+    background-color: black;
+    margin-top: 1%;
+    margin-left: 15%;
+    width: 70vw;
+    border-radius: 30px;
+    transition: box-shadow 1s;
+    margin-left: 26%;
+    
+
+
+}
+.club6:hover{
+    box-shadow: 10px 10px 50px red;
+
+}
+.club6 span{
+    color: yellow;
+    border: 2px solid black;
+    font-size: 60px;
+    margin-left: 30%;
+    letter-spacing: 3px;
+
+}
+.logo .matrix{
+    height: 370px;
+    width: 520px;
+    border: 2px solid white;
+    margin-top: 13%;
+    margin-left: 3%;
+}
+/* footer */
+footer{
+    background-color:white ;
+}
+
+.footer{
+    width: 100%;
+    background: linear-gradient(to right, #00093c,#2d0b00);
+    color: #fff;
+    padding: 100px 0 30px;
+    /* border-top-left-radius: 125px; */
+    font-size: 13px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
+}
+.social ul{
+    display: flex;
+    list-style: none;
+    
+}
+
+
+
+.sites a{
+    font-size: 100px;
+    padding: 90px;
+    
+   
+}
+.cw{
+    margin-top: 50px;
+    font-size: 20px;
+    font-family: 'Luxurious Roman', cursive;
+}
+.cw a{
+    text-decoration: none;
+    color: red;
+}
+.cw p a:link{
+    color: aqua;
+}
+.cw p a:visited{
+    color: green;
+}
+.cw p a:active{
+    color: cornflowerblue;
+}
+.cw p a:hover{
+    color: palevioletred;
+}
+#insta{
+    color: rgb(255, 44, 79);
+}
+#lnkd{
+    color: rgb(25, 185, 248);
+}
+#twitter{
+    color: white;
+}
+#fb{
+    color: white;
+}
+
+@keyframes aniclub{
+    0%{margin-bottom: 1%;}
+    50%{
+        margin-left: 10%;
+        box-shadow: 4px 4px 6px red;
+    }
+    100%{
+        box-shadow: 4px 4px 6px yellow;
+    }
+}
+
+ 
+
+@media(max-width:720px){
+    .second{
+        width: 100vw;
+        height: 40vh;
+        background-image: url(audimage.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .second .title{
+        color: white;
+        border: 5px solid white;
+        background-color: rgba(0, 0, 0, 0.6);
+        font-family: 'Luxurious Roman', cursive;
+        font-size: 30px;
+        padding-left:  30px;
+        padding-top:  30px;
+        padding-bottom:  30px;
+        padding-right:  30px;
+        border-bottom-right-radius: 70px ;
+        border-top-left-radius: 70px ;
+    }
+    .third .wlcm{
+        font-size: 35px;
+        color: white;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        margin-top: 4%;
+        border-top: 5px solid red;
+        border-bottom: 5px solid red;
+        font-family: 'Luxurious Roman', cursive;
+        letter-spacing: 5px;
+    }
+    .notice .noticel{
+        font-size: 15px;
+        color: white;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        margin-top: 4%;
+        margin-left: 5%;
+        margin-right: 5%;
+        border-top: 5px solid red;
+        border-bottom: 5px solid red;
+        background-color: rgba(0, 0, 0, 0.8);
+        font-family: 'Luxurious Roman', cursive;
+        letter-spacing: 5px;
+    }
+    .logo{
+        display: flex;
+        flex-wrap: wrap;
+     }
+    
+    .cname{
+        color:yellow;
+        font-size: 35px;
+        margin-left: 30%;
+        letter-spacing: 3px;
+    } 
+    .club1{
+        display: flex;
+        flex-wrap: wrap;
+        border: 3px solid white;
+        background-color: black;
+        margin-left: 10%;
+        margin-right: 5%;
+        width: 80vw;
+        
+        
+    }   
+    .logo .ieee{
+        height: 140px;
+        width: 240px;
+        border: 2px solid white;;
+        margin-left: 12%;
+    }
+    .club2{
+        display: flex;
+        flex-wrap: wrap;
+        border: 3px solid white;
+        background-color: black;
+        margin-left: 10%;
+        margin-right: 5%;
+        width: 80vw;
+    }
+    .logo .gdsc{
+        height: 140px;
+        width: 240px;
+        border: 2px solid white;
+        margin-left: 12%;
+    }
+    .club3{
+        display: flex;
+        flex-wrap: wrap;
+        border: 3px solid white;
+        background-color: black;
+        margin-left: 10%;
+        margin-right: 5%;
+        width: 80vw;
+    }
+    .logo .bnb{
+        height: 140px;
+        width: 240px;
+        border: 2px solid white;
+        margin-left: 12%;
+    }
+    .club4{
+        display: flex;
+        flex-wrap: wrap;
+        border: 3px solid white;
+        background-color: black;
+        margin-left: 10%;
+        margin-right: 5%;
+        width: 80vw;
+    }
+    .logo .c2s2{
+        height: 140px;
+        width: 240px;
+        border: 2px solid white;
+        margin-left: 12%;
+    }
+    .club5{
+        display: flex;
+        flex-wrap: wrap;
+        border: 3px solid white;
+        background-color: black;
+        margin-left: 10%;
+        margin-right: 5%;
+        width: 80vw;
+    }
+    .logo .ebuzz{
+        height: 140px;
+        width: 240px;
+        border: 2px solid white;
+        margin-left: 12%;
+        
+    }
+    .club5 span{
+        color: yellow;
+        font-size: 30px;
+        margin-left: 10;
+        letter-spacing: 3px;
+    
+    }
+    .club6{
+        display: flex;
+        flex-wrap: wrap;
+        border: 3px solid white;
+        background-color: black;
+         margin-left: 10%;
+        margin-right: 5%;
+        width: 80vw;
+    }
+    .club6 span{
+        color: yellow;
+        font-size: 35px;
+        margin-left: 25%;
+        letter-spacing: 3px;
+
+    }
+    .logo .matrix{
+        height: 140px;
+        width: 240px;
+        border: 2px solid white;
+        margin-left: 12%;
+        
+    }
+    .club3  .bname{
+        color: yellow;
+        font-size: 35px;
+        margin-left: 5%;
+        /* letter-spacing: 3px; */
+    }
+    .about{
+        color: white;
+        font-size: 15px;
+        border: 2px solid white;
+        display: flex;
+        margin-top: 3%;
+        font-family: 'Titillium Web', sans-serif;
+    }
+    .footer{
+        width: 100%;
+        background: linear-gradient(to right, #00093c,#2d0b00);
+        color: #fff;
+        padding: 100px 0 30px;
+        /* border-top-left-radius: 125px; */
+        font-size: 13px;
+        line-height: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+        
+    }
+    .sites a{
+        font-size: 50px;
+        padding: 20px;
+        
+       
+    }
+    
+   
+        
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+  ::-webkit-scrollbar{
+    width: 0;
+}

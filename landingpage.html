@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #000;
+        }
+
+        .container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            transition: translate(-50%, -50%);
+            width: 100%;
+        }
+
+        .container span {
+            display: block;
+            text-transform: uppercase;
+        }
+
+        .text1 {
+            font-size: 60px;
+            font-weight: 700;
+            letter-spacing: 8px;
+            margin-bottom: 20px;
+            position: relative;
+            animation: text 4s 1;
+            background: radial-gradient(yellow, orange, red);
+        }
+
+        .text2 {
+            font-size: 30px;
+            color: #6ab04c;
+        }
+
+        @keyframes text {
+            0% {
+                color: black;
+                margin-bottom: -40px;
+            }
+
+            30% {
+                letter-spacing: 25px;
+                margin-bottom: -40px;
+            }
+
+            65% {
+                color: blue;
+                letter-spacing: 8px;
+                margin-bottom: -40px;
+            }
+
+            65% {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span class="text1">hello chitkarian</span>
+        <span class="text2">Welcome to canopy</span>
+    </div>
+</body>
+<script>
+    var timer = setTimeout(function () {
+        window.location = 'Home page.html'
+    }, 4000);
+</script>
+
+</html>

@@ -1,0 +1,193 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    color: white;
+}
+.webname{
+    font-family: 'Times New Roman', Times, serif;
+    margin: .5rem;
+    font-size: 2rem;
+}
+.navbarlinks ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbarlinks li{
+    list-style: none;
+}
+.navbarlinks li a{
+    text-decoration:none ;
+    color: white;
+    padding: 1rem;
+    display: block;
+    font-family: 'Times New Roman', Times, serif ;
+    margin: 10px 20px;
+    left: 50px;
+}
+.navbarlinks li a::after{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0.4em;
+    width: 0%;
+    background-color: red;
+    transition: all ease-in-out .5s;
+}
+.navbarlinks li a:hover::after{
+    width: 5%;
+}
+.navbarlinks li a:hover{
+    color: red;
+}
+
+.navbarlinks li:hover{
+    background-color: black;
+    border-radius: 9pt;
+    box-shadow: 1px 1px 15px white;
+}
+#toggle{
+    display: none;
+}
+.toggle .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10pt;
+}
+.cross{
+    visibility: hidden;
+}
+
+@media (max-width: 750px){
+    #toggle{
+        position: absolute;
+        right: 0%;
+        top: 0%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 20px 40px 0 0;
+    }
+    .navbarlinks li:hover{
+        background-color: red;
+        box-shadow: 0px 0px 0px red;
+    }
+    .navbarlinks{
+        position: absolute;
+        right: -5000px;
+        top: 0;
+        background-color: red;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+     .navbarlinks ul {
+        width: 100%; 
+        flex-direction: column;
+        
+    }
+     .navbarlinks li{
+        text-align: left;
+        margin: 0px 20px;
+    }
+    .navbarlinks li a{
+        padding: .5rem 1rem;
+    }
+    .navbarlinks.active{
+        display: flex;
+    }
+    .cross{
+        visibility: visible;
+    }
+    li .cross{
+        margin-top: 30px;
+        color: black;
+        margin-left: 130px;
+    }
+    li .cross:hover{
+        background-color: white;
+        border-radius: 4pt;
+    }
+    .navbarlinks li a::after{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 0.4em;
+        width: 0%;
+        background-color: red;
+        transition: all ease-in-out .3s;
+    }
+    .navbarlinks li a:hover::after{
+        width: 13%;
+    }
+    .navbarlinks li a:hover{
+        color: black;
+    }
+   
+}
+.second{
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image: url(audimage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid black;
+}
+.second .title{
+    color: white;
+    border: 5px solid white;
+    text-transform: uppercase;
+    box-shadow: 1px 1px 10px black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-family: 'Luxurious Roman', cursive;
+    font-size: 70px;
+    padding-left:  30px;
+    padding-top:  30px;
+    padding-bottom:  30px;
+    padding-right:  30px;
+    border-bottom-right-radius: 70px ;
+    border-top-left-radius: 70px;
+}
+@media(max-width:720px){
+    .second{
+        width: 100vw;
+        height: 40vh;
+        background-image: url(audimage.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .second .title{
+        color: white;
+        border: 5px solid white;
+        background-color: rgba(0, 0, 0, 0.6);
+        font-family: 'Luxurious Roman', cursive;
+        font-size: 30px;
+        padding-left:  30px;
+        padding-top:  30px;
+        padding-bottom:  30px;
+        padding-right:  30px;
+        border-bottom-right-radius: 70px ;
+        border-top-left-radius: 70px ;
+    }
+        
+}

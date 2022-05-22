@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="signin.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cookie&family=Luxurious+Roman&family=Slabo+27px&family=Tinos&family=Vujahday+Script&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arvo&family=Cookie&family=Luxurious+Roman&family=Slabo+27px&family=Tinos&family=Vujahday+Script&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <section class="sin">
+        <div class="image">
+            <img src="logo.png">
+        </div>
+
+        <div class="contentbox">
+            <div class="formbox">
+                <img src="userlogo.png" class="userlogo">
+                <h2>Login Here</h2>
+                <form novalidate autocomplete="off">
+                    <div class="inputbox">
+                        <span>Username&nbsp;<i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" placeholder="Username" class="textbox" maxlength="20" id="usernamelogin">
+                    </div>
+                    <div class="inputbox">
+                        <span>Password&nbsp;<i class="glyphicon glyphicon-lock"></i></span>
+                        <input type="password" placeholder="Password" class="textbox" minlength="4" id="passwordlogin">
+                    </div>
+                    <div class="remember">
+                        <label><input type="checkbox" name="">Remember me</label>
+                    </div>
+                    <div class="inputbox">
+                        <input class="loginbtn" type="submit" name="submit" value="LOGIN" onclick="clicked(event)">
+                    </div>
+                    <div class="inputbox">
+                        <p>Don't Have an account?<a href="Signup.html">Sign Up</a></p>
+                        <p><a href="#">Forgotten Password</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+        function clicked(e) {
+            e.preventDefault();
+            var v = document.querySelector('#usernamelogin');
+            var i = v.value;
+            var b = document.querySelector('#passwordlogin')
+            var y = b.value
+            if (i === "") {
+                alert("PLEASE FILL ALL THE FIEDLS CORRECTLY")
+            }
+            else if (y === "") {
+                alert("PLEASE FILl THE password CORRECTLY")
+            }
+            else {
+                location.href = "landingpage.html";
+            }
+        }
+
+        // function clicked() {
+        //     window.location.href = open("Home page.html");
+        // }
+
+    </script>
+
+
+</body>
+
+</html>

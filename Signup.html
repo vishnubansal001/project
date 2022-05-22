@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign UP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arvo&family=Cookie&family=Luxurious+Roman&family=Slabo+27px&family=Tinos&family=Vujahday+Script&display=swap"
+        rel="stylesheet">
+    
+
+</head>
+
+<body>
+    <section class="sup">
+        <div class="image">
+            <img src="logo.png">
+        </div>
+        <div class="contentbox">
+            <div class="formbox">
+                <h2 class="signups">signup Here</h2>
+                <form name="myform"  autocomplete="off" >
+                    <div class="inputbox">
+                        <span class="spans">* User ID:</span>&emsp;&ensp;&emsp;
+                        <input type="text" id="usernamelogin" placeholder="User ID Or Email ID" maxlength="15"
+                            class="textbox"><span class="formerror"></span>
+                    </div>
+                    <div class="inputbox">
+                        <span class="spans">* First Name:</span>&ensp;&emsp;
+                        <input type="text" id="firstnamesignup" placeholder="Enter Your First Name"
+                            maxlength="15" class="textbox"><span class="formerror"></span>
+                    </div>
+                    <div class="inputbox">
+                        <span class="spans">* Last Name:</span>&ensp;&emsp;
+                        <input type="text" id="lastnamesignup" placeholder="Enter Your Second Name"
+                            maxlength="10" class="textbox"><span class="formerror"></span>
+                    </div>
+                    <div class="inputbox">
+                        <span class="spans">* Password:</span>&ensp;&emsp;&emsp;
+                        <input type="password" id="passwordlogin" placeholder="Enter password" maxlength="10"
+                            class="textbox"><span class="formerror"></span>
+                    </div>
+                    <div class="inputbox">
+                        <span id="password" class="spans">* Confirm Password:</span>&nbsp;
+                        <input type="password" id="passwordlogin2" placeholder="Enter Password" maxlength="10"
+                            class="textbox"><span class="formerror"></span>
+                    </div>
+                    <div class="inputbox">
+                        <!-- <button class="signupbtn" onclick="clicked()">SIGN UP</button> -->
+                        <input class="signupbtn" type="submit" name="submit" value="SIGN UP" onclick="clicked(event)">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+     
+      
+     function clicked(e){
+         e.preventDefault();
+       var v = document.querySelector('#usernamelogin');
+        var i = v.value ;
+        var s = document.querySelector('#firstnamesignup')
+        var h = s.value 
+        var n = document.querySelector('#lastnamesignup')
+        var u = n.value 
+        var b = document.querySelector('#passwordlogin')
+        var y = b.value 
+        var x = document.querySelector('#passwordlogin2')
+        var z = x.value 
+        if (i === ""){
+            alert("PLEASE FILL ALL THE FIEDLS CORRECTLY")
+        }
+        else if ( h === "" ){
+            alert("PLEASE FILl THE First name CORRECTLY")
+        }
+        else if ( u === ""){
+            alert("PLEASE FILl THE last name CORRECTLY")
+        }
+        else if ( y === "" ){
+            alert("PLEASE FILl THE password CORRECTLY")
+        }
+        else if ( z === "" ){
+            alert("PLEASE FILl THE password CORRECTLY")
+        }
+        else{
+            location.href = "signin.html";
+        }
+    }
+
+
+        
+        // function seterror(id, error){
+        //     Element = document.getElementById(id);
+        //     Element.getElementsByClassName('formerror')[0].innerHTML=error;
+        // }
+
+        // function clicked(){
+        //     function validate(){
+        //         var returnval= true;
+        //         var name = document.forms['myform']['firstnamesignup'].value;
+        //         if (name.length==0){
+        //             seterror("name","*name is required");
+        //             returnval=false;
+        //         }
+        //         else{
+        //             window.location.href=open("Signin.html")
+        //         }
+        //     }
+        //     // if(returnval==true){
+        //     // window.location.href=open("Signin.html")}
+        // }
+        </script>
+     
+</body>
+
+</html>
